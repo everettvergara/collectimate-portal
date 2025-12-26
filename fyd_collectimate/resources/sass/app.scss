@@ -1,0 +1,40 @@
+// Fonts
+// @import url('https://fonts.bunny.net/css?family=source-sans-pro');
+// @import url('https://fonts.bunny.net/css?family=poppins');
+// @import url('https://fonts.bunny.net/css?family=inter');
+// @import 'resources/css/source-sans-pro.css';
+// @import 'resources/css/poppins.css';
+// @import 'resources/css/inter.css';
+
+@import '../css/source-sans-pro';
+@import '../css/poppins';
+@import '../css/inter';
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import '../css/menu.css';
+
+@import '../css/select2.min.css';
+
+@import '../css/blade.css';
+
+@import '../css/select2-bootstrap-5-theme.min.css';
+
+@import '../css/select2-bootstrap-5-theme.rtl.min.css';
+
+@import '../css/select-2.css';
+
+@import '../css/air_printout.css';
+@import '../css/pagination.css';
+
+@import './table/table.scss';
+
+@import './custom.scss';
+
+@import 'menu/main-navigation';
+@import 'banner/banner';
+@import 'page/promotion-page';

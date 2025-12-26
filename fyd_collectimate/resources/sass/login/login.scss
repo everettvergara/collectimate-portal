@@ -1,0 +1,28 @@
+.login-container {
+    background-image: url('/storage/logo/botejyu-background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+@media (max-width: 2560px) {}
+
+@media (max-width: 1680px) {}
+
+@media (max-width: 1440px) {}
+
+@media (max-width: 1320px) {}
+
+@media (max-width: 1230px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+    .login-container {
+        height: 100%;
+    }
+}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}

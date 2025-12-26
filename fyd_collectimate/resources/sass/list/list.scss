@@ -1,0 +1,44 @@
+.list-style-type-none {
+    list-style-type: none;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines, adjust as necessary */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto; /* Adjust height based on line count */
+}
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines, adjust as necessary */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto; /* Adjust height based on line count */
+}
+.line-clamp-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limit to 5 lines, adjust as necessary */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto; /* Adjust height based on line count */
+}
+.line-clamp-6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limit to 6 lines, adjust as necessary */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto; /* Adjust height based on line count */
+}
+.line-clamp-7 {
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* Limit to 7 lines, adjust as necessary */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto; /* Adjust height based on line count */
+}

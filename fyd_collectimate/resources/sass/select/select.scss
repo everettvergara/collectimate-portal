@@ -1,0 +1,11 @@
+.select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__clear, .select2-container--bootstrap-5 .select2-selection--single .select2-selection__clear {
+    position: absolute;
+    top: 50%;
+    left: unset;
+    right: .3rem!important;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 8px;
+    border-radius: 30%;
+    border: 1px solid $secondary;
+}

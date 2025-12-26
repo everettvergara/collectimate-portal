@@ -1,0 +1,18 @@
+.select2-container--bootstrap-5 .select2-selection,
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option,
+.select2-container--bootstrap-5 .select2-dropdown .select2-search .select2-search__field
+{
+    /* font-size: .7rem; */
+}
+
+/* .select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option {
+    font-size: 0.7rem;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown .select2-search .select2-search__field {
+    font-size: 0.7rem;
+} */
+
+.select2-container--bootstrap-5 .select2-selection{
+    background-color: #f8fafc;
+}

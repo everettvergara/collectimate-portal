@@ -1,0 +1,49 @@
+@extends('layouts.empty')
+
+@section('content')
+    <div class="login-container">
+        <div class="container h-100">
+            <div class="row align-items-center justify-content-center h-100">
+                <div class="col-12 col-lg-7 mb-5 mt-5 mt-lg-0">
+                    <img src="{{ asset('/storage/logo/logo.png') }}" alt="" class="mb-3"
+                        style="
+							width: auto;
+							height: 100%;
+							max-width: 100%;
+							max-height: 80px;
+							display: block;
+							margin: 0 auto;
+					">
+                    <h1 class="text-center text-primary">Welcome to {{ config('app.name') }}</h1>
+                </div>
+                <div class="col-12 col-md-8 col-lg-5 mb-5 mb-lg-0">
+                    <div class="card text-secondary rounded-4 border-0">
+                        <div class="card-body p-4 p-lg-5 my-3 my-lg-5 mx-2">
+                            <div
+                                class="d-flex flex-column align-items-center justify-content-center mb-3 mb-md-4 overflow-hidden">
+                                <img src="{{ asset('/storage/logo/logo.png') }}" alt="" class="mb-3"
+                                    style="
+                                            width: auto;
+                                            height: 100%;
+                                            max-width: 100%;
+                                            max-height: 100px;
+                                            display: block;
+                                            margin: 0 auto;
+                                    ">
+                                <h3 class="text-black fw-normal inter">{{ __('Thank You') }}</h3>
+                                <p class="text-secondary m-0 fw-normal inter text-center">Please check your email for
+                                    instructions to reset
+                                    your password</p>
+                            </div>
+                            <div class="mt-3">
+                                <a href="/login"
+                                    class="text-decoration-none btn btn-md btn-danger w-100 rounded-5 text-white">Go back to
+                                    login </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection()

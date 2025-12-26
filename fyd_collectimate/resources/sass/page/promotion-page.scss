@@ -1,0 +1,527 @@
+
+.app-frontend #main-content.active{
+    width: 100% !important;
+}
+
+
+#promotion-mechanics-form{
+    padding-bottom: 75px;
+    background: #1e1e1e;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+#promotion-mechanics-form .pmf-wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+#promotion-mechanics-form #top-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#promotion-mechanics-form #top-section .ts-left{
+    flex-basis: 60%;
+    align-self: center;
+}
+#promotion-mechanics-form #top-section .ts-left #countdown{
+    display: flex;
+}
+#promotion-mechanics-form #top-section .ts-left #countdown .counter{
+    margin-right: 30px;
+    text-align: center;
+}
+#promotion-mechanics-form #top-section .ts-left #countdown .counter span{
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+#promotion-mechanics-form #top-section .ts-left #countdown .counter p{
+    color: #fad8d6;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+#promotion-mechanics-form #top-section .ts-left #countdown .counter:hover p {
+  transform: rotateX(360deg);
+}
+
+#promotion-mechanics-form #top-section .ts-right{
+    flex-basis: 35%;
+}
+#promotion-mechanics-form #top-section .ts-right .tsr-image{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+#promotion-mechanics-form #top-section .ts-right .tsr-image img{
+    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
+
+#promotion-mechanics-form #bottom-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#promotion-mechanics-form #bottom-section .bs-left{
+    flex-basis: 45%;
+}
+#promotion-mechanics-form #bottom-section .bs-left .title{
+    font-size: 36px;
+    color: #fad8d6;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+#promotion-mechanics-form #bottom-section .bs-left .description{
+
+}
+#promotion-mechanics-form #bottom-section .bs-left .description ul{
+
+}
+#promotion-mechanics-form #bottom-section .bs-left .description li{
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+#promotion-mechanics-form #bottom-section .bs-right{
+    flex-basis: 45%;
+    background: transparent;
+    border: 0;
+}
+#promotion-mechanics-form #bottom-section .bs-right .card-body{
+    padding: 0;
+}
+#promotion-mechanics-form #bottom-section .bs-right .card-body .card-header{
+    font-size: 36px;
+    color: #fad8d6;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 0 30px 0;
+    line-height: 1.5;
+    border: 0;
+}
+#promotion-mechanics-form #bottom-section form{
+
+}
+#promotion-mechanics-form #bottom-section form .receipt-date{
+    display: none;
+}
+#promotion-mechanics-form #bottom-section form .col-12 label{
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+#promotion-mechanics-form #bottom-section form .col-12 input{
+    background: #f0f0f0;
+    font-size: 14px;
+    color: #444;
+    height: 40px;
+    border-radius: 2px;
+}
+#promotion-mechanics-form #bottom-section form .col-12 textarea{
+    background: #f0f0f0;
+    font-size: 14px;
+    color: #444;
+    border-radius: 2px;
+}
+#promotion-mechanics-form #bottom-section form .col-12 select{
+    background: #f0f0f0;
+    font-size: 14px;
+    color: #444;
+    height: 40px;
+    border-radius: 2px;
+}
+#promotion-mechanics-form #bottom-section form .col-12 select::placeholder{
+    font-size: 14px;
+    color: #444;
+}
+#promotion-mechanics-form #bottom-section form .col-12 select option{
+    font-size: 14px;
+}
+#promotion-mechanics-form #bottom-section form .pp-tac{
+    margin-bottom: 10px;
+}
+#promotion-mechanics-form #bottom-section form .pp-tac label a,
+#promotion-mechanics-form #bottom-section form .pp-tac label{
+    font-size: 13px !important;
+}
+#promotion-mechanics-form #bottom-section form .g-recaptcha{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 15px;
+}
+#promotion-mechanics-form #bottom-section form .form-actions button{
+    background: #db2a2a;
+    border: 1px solid #db2a2a;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    transition-duration: 0.8s;
+    transition-delay: 0.2s;
+}
+#promotion-mechanics-form #bottom-section form .form-actions button:hover{
+    background: #fff;
+    color: #db2a2a;
+}
+
+
+
+
+
+.select2-container{
+
+}
+.select2-container .select2-dropdown{
+
+}
+.select2-container .select2-dropdown ul{
+
+}
+.select2-container .select2-dropdown ul li{
+    font-size: 14px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* THANK YOU PAGE */
+
+#thankyou-page{
+    padding: 0;
+}
+#thankyou-page .container-wrapper{
+    position: relative;
+}
+#thankyou-page .background{
+    position: relative;
+    width: 100vw;
+    height: 91vh;
+    overflow: hidden;
+}
+#thankyou-page .background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+#thankyou-page .background .mobile{
+    display: none;
+}
+#thankyou-page .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #1e1e1ed6;
+}
+#thankyou-page .details .details-wrapper{
+    align-self: center;
+    width: 100%;
+}
+#thankyou-page .details .details-center{
+    padding: 0 15px;
+    text-align: center;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+#thankyou-page .details .float-img{
+    position: absolute;
+    top: 0;
+    height: 350px;
+    overflow: hidden;
+}
+#thankyou-page .details .float-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: -50px;
+}
+#thankyou-page .details .title{
+    margin-bottom: 5px;
+}
+#thankyou-page .details .title h6{
+    color: #ffde59;
+    font-size: 40px;
+    letter-spacing: 0.3px;
+}
+#thankyou-page .details .body{
+
+}
+#thankyou-page .details .body p{
+    font-size: 32px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* FAIL PAGE */
+
+#failed-page{
+    padding: 0;
+}
+#failed-page .container-wrapper{
+    position: relative;
+}
+#failed-page .background{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#failed-page .background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+#failed-page .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #1e1e1ed6;
+}
+#failed-page .details .details-wrapper{
+    align-self: center;
+    width: 100%;
+}
+#failed-page .details .details-center{
+    padding: 0 15px;
+    text-align: center;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+#failed-page .details .float-img{
+    position: absolute;
+    top: 0;
+    height: 350px;
+    overflow: hidden;
+}
+#failed-page .details .float-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: -50px;
+}
+#failed-page .details .title{
+    margin-bottom: 5px;
+}
+#failed-page .details .title h6{
+    color: #ffde59;
+    font-size: 40px;
+    letter-spacing: 0.3px;
+}
+#failed-page .details .body{
+
+}
+#failed-page .details .body p{
+    font-size: 32px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* PRIVACY POLICY PAGE */
+#privacy-policy{
+    background: #1e1e1e;
+}
+#privacy-policy .container-wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding:75px 15px;
+}
+#privacy-policy .details .title{
+    margin-bottom: 30px;
+}
+#privacy-policy .details .title h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+#privacy-policy .details .body h4{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+#privacy-policy .details .body p{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7;
+}
+#privacy-policy .details .body a{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7;
+}
+#privacy-policy .details .body ul{
+
+}
+#privacy-policy .details .body ul li{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+/* TERMS & CONDITION PAGE */
+#terms-and-condition{
+    background: #1e1e1e;
+}
+#terms-and-condition .container-wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding:75px 15px;
+}
+#terms-and-condition .details .title{
+    margin-bottom: 30px;
+}
+#terms-and-condition .details .title h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+#terms-and-condition .details .body h4{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+#terms-and-condition .details .body p{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7;
+}
+#terms-and-condition .details .body a{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7;
+}
+#terms-and-condition .details .body ul{
+
+}
+#terms-and-condition .details .body ul li{
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+    #promotion-mechanics-form #top-section{
+        padding: 30px 0;
+        justify-content: center;
+    }
+    #promotion-mechanics-form #top-section .ts-right{
+        display: none;
+    }
+    #promotion-mechanics-form #bottom-section .bs-left,
+    #promotion-mechanics-form #bottom-section .bs-right{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    #thankyou-page .background .desktop{
+        display: none;
+    }
+    #thankyou-page .background .mobile{
+        display: block;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    #promotion-mechanics-form #top-section .ts-left #countdown .counter{
+        margin: 0 10px;
+    }
+    #promotion-mechanics-form #top-section .ts-left #countdown .counter span,
+    #promotion-mechanics-form #bottom-section .bs-right .card-body .card-header,
+    #promotion-mechanics-form #bottom-section .bs-left .title{
+        font-size: 28px;
+    }
+
+
+    /* THANK YOU PAGE */
+
+    #thankyou-page .details .float-img{
+        height: 250px;
+    }
+    #thankyou-page .details .title h6{
+        font-size: 32px;
+    }
+    #thankyou-page .details .body p{
+        font-size: 24px;
+    }
+    /* FAILED PAGE */
+    #failed-page .details .float-img{
+        height: 250px;
+    }
+    #failed-page .details .title h6{
+        font-size: 32px;
+    }
+    #failed-page .details .body p{
+        font-size: 24px;
+    }
+
+}

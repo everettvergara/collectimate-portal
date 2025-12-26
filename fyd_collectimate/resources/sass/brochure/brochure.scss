@@ -1,0 +1,57 @@
+.brochure-bg {
+    background-image: url(../../public/storage/logo/brochure.bg.png);
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; /* ensures it fills the view */
+    width: 100%;
+}
+
+.brochure-logo {
+    position: absolute;
+    top: -15px;
+    left: -30px;
+}
+
+.brochure-header {}
+
+
+@media (max-width: 2560px) {}
+
+@media (max-width: 1680px) {}
+
+@media (max-width: 1440px) {
+    .brochure-header {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 1320px) {}
+
+@media (max-width: 1230px) {}
+
+@media (max-width: 1024px) {
+    .brochure-bg {
+        height: 100%;
+    }
+
+    .brochure-logo {
+        top: -15px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {
+    .brochure-header {
+        margin-left: 100px;
+    }
+
+    .brochure-logo {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 475px) {}

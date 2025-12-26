@@ -1,0 +1,146 @@
+input[readonly],
+textarea[readonly] {
+    pointer-events: none;
+}
+
+.form-control {
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.form-control:focus {
+    outline: none !important;
+    background-color: white;
+}
+
+.custom-form-control {
+    padding: 0.9rem 1.5rem;
+    border: 1.9px dotted #848586;
+    border-radius: 8px;
+
+    &+.select2-container--bootstrap-5 {
+        .select2-selection--single {
+            min-height: 55px !important;
+            padding: 1.1rem 2rem 0.9rem 2rem !important;
+            border: 1.9px dotted #848586;
+            border-radius: 8px;
+        }
+    }
+}
+
+.custom-form-select {
+    padding: 0.9rem 1.5rem;
+    border: 1.9px dotted #848586;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+    /* Adjust font size */
+}
+
+// input
+.custom-input {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    border-width: 1px;
+    border-color: #bcbabb;
+    color: $dark;
+}
+
+.custom-input-light {
+    border-radius: 30px;
+    color: $sub-primary !important;
+    box-shadow: 2px 4px 1px #dae2e7 !important;
+}
+
+.custom-sub-input {
+    border-radius: 30px;
+    color: $sub-primary !important;
+    border-color: rgba($sub-primary, 0.3);
+}
+
+.custom-sub-input:disabled {
+    background-color: rgba($sub-primary, 0.1) !important;
+}
+
+.custom-sub-input:read-only {
+    background-color: rgba($sub-primary, 0.1) !important;
+}
+
+.custom-form-check {
+    border: 1.9px dotted #848586;
+}
+
+input::placeholder {
+    color: #6c7985 !important;
+    /* Change to your desired color */
+    opacity: 1;
+    /* Makes sure the placeholder is fully opaque */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+input[type="password"]:focus {
+    color: #3b3b3b !important;
+    /* Desired focus color */
+    font-size: 16px;
+    /* Keep the font size the same as normal state */
+}
+
+
+textarea::placeholder {
+    color: $dark !important;
+    /* Change to your desired placeholder color */
+    opacity: 1;
+    /* Makes sure the placeholder is fully opaque */
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: $light;
+    /* Change button background */
+    color: $dark;
+    /* Change button text color */
+}
+
+.form-select {
+    color: $dark;
+}
+
+#subscriptionSection {
+    color: $sub-primary;
+}
+
+.form-check-input.custom-form-center {
+    width: 1em;
+    height: 1em;
+    border: 2px solid #dc3545; // Bootstrap's $danger
+    background-color: transparent;
+
+    &:checked {
+        background-color: #dc3545; // Danger color
+        border-color: #dc3545;
+
+        // Optional checkmark color
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 4.146a.5.5 0 0 1 0 .708l-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 11.293l7.146-7.147a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25); // danger focus ring
+    }
+}
+
+.form-check-input:checked {
+    background-color: $danger;
+    border-color: $danger;
+}

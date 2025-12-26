@@ -1,0 +1,2 @@
+<img src="{{ is_file(public_path($srcImg)) ? asset($srcImg) : asset('storage/attachments/user/user.png') ?? asset('storage/attachments/user/user.png') }}"
+    alt="" srcset="" class="{{ $class ?? ''}}" style="width: {{ $width ?? '50px' }}; height: {{ $height ?? '50px' }}; max-width: {{ $maxWidth ?? '' }}; max-height: {{ $maxHeight ?? '' }}; object-fit: {{$objectFit ?? 'cover'}}; object-position: {{$objectPosition ?? 'top'}}">

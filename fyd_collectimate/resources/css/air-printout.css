@@ -1,0 +1,305 @@
+
+.air-content-section .air-content-header{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    background: #339966;
+    color: white;
+}
+.air-content-section .content{
+    padding: 0 15px;
+}
+
+.air-content-section .content .content-top{
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.air-content-section .content .content-top > div .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #5f9a69;
+    color: white;
+    text-align: center;
+}
+.air-content-section .content .content-top .incident-information{
+    flex-basis: 40%;
+}
+.air-content-section .content .content-top .incident-description{
+    flex-basis: 60%;
+}
+.air-content-section .content .content-top .incident-description .details,
+.air-content-section .content .content-top .incident-information .details{
+    padding: 15px;
+}
+.air-content-section .content .content-top .incident-description .details p,
+.air-content-section .content .content-top .incident-information .details > div{
+    font-size: 14px;
+    line-height: 1.8
+}
+
+.air-content-section .content .content-top .incident-information .details .incident-id,
+.air-content-section .content .content-top .incident-information .details .incident-no,
+.air-content-section .content .content-top .incident-information .details .date-of-incident,
+.air-content-section .content .content-top .incident-information .details .date-reported,
+.air-content-section .content .content-top .incident-information .details .time-of-incident,
+.air-content-section .content .content-top .incident-information .details .time-reported{
+    display: inline-block;
+    width: 49%;
+}
+.air-content-section .content .content-top .incident-information .details .personnel-involved,
+.air-content-section .content .content-top .incident-information .details .incident-location{
+    margin-top: 30px;
+}
+
+.air-content-section .content .content-top .incident-information .details .cause-of-incident{
+    margin: 30px 0
+}
+.air-content-section .content .content-top .incident-information .details .employee-classification,
+.air-content-section .content .content-top .incident-information .details .gender,
+.air-content-section .content .content-top .incident-information .details .job-title,
+.air-content-section .content .content-top .incident-information .details .cause-of-incident{
+    color: red;
+}
+
+.air-content-section .content .content-middle{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.air-content-section .content .content-middle .cm-top{
+    display: flex;
+}
+.air-content-section .content .content-middle .safety-and-health,
+.air-content-section .content .content-middle .environment,
+.air-content-section .content .content-middle .security{
+    flex-basis: 13.33%;
+}
+.air-content-section .content .content-middle .safety-and-health .header,
+.air-content-section .content .content-middle .environment .header,
+.air-content-section .content .content-middle .security .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background:#c0c0c0;
+    color:black;
+    text-align: center;
+}
+.air-content-section .content .content-middle .safety-and-health .details,
+.air-content-section .content .content-middle .environment .details,
+.air-content-section .content .content-middle .security .details{
+    padding: 15px;
+}
+.air-content-section .content .content-middle .safety-and-health .details p,
+.air-content-section .content .content-middle .environment .details p,
+.air-content-section .content .content-middle .security .details p{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.air-content-section .content .content-middle .root-cause{
+    flex-basis: 60%;
+}
+.air-content-section .content .content-middle .root-cause .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background:#5f9a69;
+    color: white;
+    text-align: center;
+}
+.air-content-section .content .content-middle .root-cause .details{
+    display: flex;
+}
+.air-content-section .content .content-middle .root-cause .details > div{
+    flex-basis: 25%;
+}
+.air-content-section .content .content-middle .root-cause .details > div .sub-header{
+    text-align: center;
+    background: #5f9a69;
+    color: white;
+    font-size: 16px;
+}
+.air-content-section .content .content-middle .root-cause .details > div .sub-details{
+    padding: 15px;
+    font-size: 14px;
+}
+
+.air-content-section .content .content-middle .cm-mid{
+    display:flex;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-left{
+    flex-basis: 40%;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-right{
+    flex-basis: 60%;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-left > div .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background:#c0c0c0;
+    color:black;
+    text-align: center;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-left > div .details{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-left .nature-of-injury .details > div{
+    flex-basis: 33.33%;
+}
+
+.air-content-section .content .content-middle .cm-mid .cmm-left .type-of-contact .details .image{
+    flex-basis: 33.33%;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-left .type-of-contact .details .list{
+    display: flex;
+    flex-basis: 60%;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-left .type-of-contact .details .list .toc{
+    flex-basis: 50%;
+}
+
+
+.air-content-section .content .content-middle .cm-mid .cmm-right .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #5f9a69;
+    color: white;
+    text-align: center;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-right .details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-right .details > div{
+    flex-basis: 25%;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-right .details > div .sub-header{
+    text-align: center;
+    background: #5f9a69;
+    color: white;
+    font-size: 16px;
+}
+.air-content-section .content .content-middle .cm-mid .cmm-right .details > div .sub-details{
+    padding: 15px;
+    font-size: 14px;
+}
+
+.air-content-section .content .content-middle .cm-bot{
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left{
+    flex-basis: 40%;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-right{
+    flex-basis: 60%;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left .header,
+.air-content-section .content .content-middle .cm-bot .cmb-left .damage-property .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #c0c0c0;
+    color: black;
+    text-align: center;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left .nature-of-damage .details,
+.air-content-section .content .content-middle .cm-bot .cmb-left .damage-property .details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left .nature-of-damage .details{
+    padding: 15px;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left .nature-of-damage .details > div,
+.air-content-section .content .content-middle .cm-bot .cmb-left .damage-property .details > div{
+    flex-basis: 33.33%
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left .damage-property .details > div .sub-header{
+    text-align: center;
+    background: #c0c0c0;
+    color:black;
+    font-size: 16px;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-left .damage-property .details > div .sub-details{
+    padding: 15px;
+    font-size: 14px;
+}
+
+.air-content-section .content .content-middle .cm-bot .cmb-right .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #5f9a69;
+    color: white;
+    text-align: center;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-right .details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-right .details > div{
+    flex-basis: 25%;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-right .details > div .sub-header{
+    text-align: center;
+    background: #5f9a69;
+    color: white;
+    font-size: 16px;
+}
+.air-content-section .content .content-middle .cm-bot .cmb-right .details > div .sub-details{
+    padding: 15px;
+    font-size: 14px;
+}
+.air-content-section .content .content-bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-bottom .cb-left{
+    flex-basis: 40%;
+}
+.air-content-section .content .content-bottom .cb-right{
+    flex-basis: 60%;
+}
+.air-content-section .content .content-bottom .cb-left .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #ffcc00;
+    color: black;
+    text-align: center;
+}
+.air-content-section .content .content-bottom .cb-left .details{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.air-content-section .content .content-bottom .cb-left .details > div{
+    flex-basis: 33.33%;
+    margin-bottom: 15px;
+}
+.air-content-section .content .content-bottom .cb-right .header{
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #5f9a69;
+    color:white;
+    text-align: center;
+}
+.air-content-section .content .content-bottom .cb-right .details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.air-content-section .content .content-bottom .cb-right .details > div{
+    flex-basis: 25%;
+}
+.air-content-section .content .content-bottom .cb-right .details > div .sub-header{
+    text-align: center;
+    background: #5f9a69;
+    color: white;
+    font-size: 16px;
+}
+.air-content-section .content .content-bottom .cb-right .details > div .sub-details{
+    padding: 15px;
+    font-size: 14px;
+}

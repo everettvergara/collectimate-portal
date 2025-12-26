@@ -1,0 +1,25 @@
+/* Hide scrollbar by default */
+.no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: $body-color; /* Ensure $body-color is defined */
+}
+
+/* Thumb styles */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background:$danger;
+    border-radius: 20px;
+}
+
+/* Show scrollbar on hover */
+.custom-scrollbar:hover::-webkit-scrollbar {
+    display: block; /* Show the scrollbar on hover */
+}
+
+

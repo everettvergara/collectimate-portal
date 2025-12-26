@@ -1,0 +1,185 @@
+.bg-title {
+    background-color: #6e718c !important;
+    color: white;
+}
+
+.custom-striped-table tbody tr:nth-child(n+2):nth-child(even) td {
+    background-color: #f1f4f6 !important;
+}
+
+
+table {
+    thead {
+        &.bg-th {
+            background-color: #f1f4f6;
+        }
+
+        tr {
+            td {
+                text-transform: capitalize;
+                color: $dark !important;
+                font-weight: 400;
+                padding: 1rem 0.3rem 0.3rem 0.3rem !important;
+                background-color: unset !important;
+
+                a {
+                    color: $dark !important;
+                }
+
+                &:first-child {
+                    padding-left: 24px !important;
+                }
+
+                &:last-child {
+                    padding-right: 24px !important;
+                }
+            }
+
+            th {
+                &:first-child {
+                    padding-left: 24px !important;
+                }
+
+                &:last-child {
+                    padding-right: 24px !important;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                td {
+                    background-color: #f1f4f6 !important;
+                }
+            }
+            td {
+
+                color: $dark !important;
+                padding: 0.3rem !important;
+                background-color: $light !important;
+
+                &:first-child {
+                    padding-left: 24px !important;
+                }
+
+                a {
+                    color: $dark !important;
+                }
+
+                .btn {
+                    color: $dark !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* RAFFLE TICKET LIST (INDEX) */
+.receipt-page .card-body form input{
+    font-size: 14px;
+}
+.receipt-page .card-body form button{
+    font-size: 14px;
+}
+.receipt-page .card-body .custom-striped-table{
+
+}
+.receipt-page .card-body .custom-striped-table thead{
+
+}
+.receipt-page .card-body .custom-striped-table thead tr{
+
+}
+.receipt-page .card-body .custom-striped-table thead tr td,
+.receipt-page .card-body .custom-striped-table thead tr td a{
+    font-size: 14px;
+}
+.receipt-page .card-body .custom-striped-table tbody tr td,
+.receipt-page .card-body .custom-striped-table tbody tr td a{
+    font-size: 14px;
+}
+
+
+/* CREATE RECEIPT PAGE */
+.create-receipt-page .card-body .mb-3 span,
+.create-receipt-page .card-body .mb-3 a{
+    font-size: 14px;
+}
+
+.create-receipt-page .card-body .row .col-12{
+
+}
+.create-receipt-page .card-body .row .col-12 label{
+    font-size: 14px;
+}
+.create-receipt-page .card-body .row .col-12 select,
+.create-receipt-page .card-body .row .col-12 input{
+    font-size: 14px;
+}
+
+
+
+
+
+@media (max-width: 2560px) {
+    table {
+        thead {
+            font-size: 1rem;
+
+            tr {
+                td {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1680px) {}
+
+@media (max-width: 1440px) {
+    table {
+        thead {
+            font-size: 0.9rem;
+
+            tr {
+                td {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {}
+
+@media (max-width: 1230px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}
