@@ -1,16 +1,6 @@
 @hidden([
 'name' => 'id',
-'label' => 'ID',
-'col' => 'col-12 col-md-6 col-lg-3 mb-3',
-'input_class' => '',
-'value' => old('id'),
-])@endhidden()
-
-@hidden([
-'name' => 'client_id',
-'col' => 'col-12 col-md-6 col-lg-3 mb-3',
-'input_class' => '',
-'value' => $client_id,
+'value' => old('id')
 ])@endhidden()
 
 @text([
@@ -19,7 +9,7 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('code'),
-'placeholder' => 'Enter the code',
+'placeholder' => 'Enter your code',
 ])@endtext()
 
 @text([
@@ -28,17 +18,17 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('name'),
-'placeholder' => 'Enter the name',
+'placeholder' => 'Enter your name',
 ])@endtext()
 
-@text([
-'name' => 'client_key',
-'label' => 'Client Key',
-'col' => 'col-12 col-md-6 col-lg-4 mb-3',
+@select([
+'name' => 'user_id',
+'label' => 'User',
+'col' => 'col-12 col-md-6 col-lg-3 mb-3',
 'input_class' => '',
-'value' => old('client_key'),
-'placeholder' => 'Enter the client key',
-])@endtext()
+'elements' => $users,
+'value' => old('user_id'),
+])@endselect()
 
 @textarea([
 'name' => 'remarks',
@@ -46,7 +36,7 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('remarks'),
-'placeholder' => 'Enter the remarks',
+'placeholder' => 'Enter your remarks',
 ])@endtextarea()
 
 <div class="col-12 col-lg-3 mb-3">

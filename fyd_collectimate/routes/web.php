@@ -8,6 +8,7 @@ use App\Http\Controllers\tb_crm_mf_client_device_controller;
 use App\Http\Controllers\tb_crm_mf_license_controller;
 use App\Http\Controllers\tb_crm_mf_license_history_controller;
 use App\Http\Controllers\tb_crm_mf_license_type_controller;
+use App\Http\Controllers\tb_crm_tr_script_controller;
 use App\Http\Controllers\tb_sys_mf_access_type_controller;
 use App\Http\Controllers\tb_sys_mf_mod_access_type_controller;
 use App\Http\Controllers\tb_sys_mf_mod_controller;
@@ -122,6 +123,8 @@ Route::middleware(['auth', "can:has_access,'Licenses'"])->controller(tb_crm_mf_l
     Route::put('/license-histories/{license_history}', 'update')->name('license-histories.update');
     Route::delete('/license-histories/{license_history}', 'destroy')->name('license-histories.destroy');
 });
+
+Route::middleware(['auth', "can:has_access,'Scripts'"])->resource('scripts', tb_crm_tr_script_controller::class);
 
 Route::middleware(['auth'])->controller(tb_sys_mf_tutorial_controller::class)->group(function () {
     Route::get('/tutorials', 'index')->name('tutorials.index');

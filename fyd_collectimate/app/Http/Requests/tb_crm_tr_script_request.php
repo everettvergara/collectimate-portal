@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class tb_crm_tr_script_request extends FormRequest
 {
@@ -13,7 +15,11 @@ class tb_crm_tr_script_request extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        if (Auth::check()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -24,7 +30,12 @@ class tb_crm_tr_script_request extends FormRequest
     public function rules()
     {
         return [
-            //
+            'code'                  => 'required|max:30',
+            'name'                  => 'required|max:255',
+            'client_id'             => 'required',
+            'license_type_id'       => 'required',
+            'description'           => 'nullable|max:1000',
+            'json_file_path'        => 'nullable|max:1000',
         ];
     }
 }

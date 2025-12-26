@@ -15,6 +15,7 @@ class tb_crm_mf_client extends Model
     protected $fillable = [
         'code',
         'name',
+        'user_id',
         'remarks',
         'is_active',
     ];
@@ -23,7 +24,12 @@ class tb_crm_mf_client extends Model
         'id',
         'code',
         'name',
+        'user_id',
         'remarks',
         'is_active',
+    ];
+
+    public $sortableAs = [
+        'user'
     ];
 }

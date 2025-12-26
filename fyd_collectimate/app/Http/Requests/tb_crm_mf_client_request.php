@@ -32,6 +32,7 @@ class tb_crm_mf_client_request extends FormRequest
         return [
             'code'                      => ['required', 'max:30', Rule::unique('tb_crm_mf_client', 'code')->ignore(Request()->id)],
             'name'                      => 'required|max:255',
+            'user_id'                   => 'required',
             'remarks'                   => 'nullable|max:1000',
             'is_active'                 => 'nullable',
         ];

@@ -16,6 +16,7 @@ class tb_crm_mf_client_device extends Model
         'client_id',
         'code',
         'name',
+        'client_key',
         'remarks',
         'is_active',
     ];
@@ -25,6 +26,7 @@ class tb_crm_mf_client_device extends Model
         'client_id',
         'code',
         'name',
+        'client_key',
         'remarks',
         'is_active',
     ];

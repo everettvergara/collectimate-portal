@@ -1,25 +1,15 @@
 @hidden([
 'name' => 'id',
-'label' => 'ID',
-'col' => 'col-12 col-md-6 col-lg-3 mb-3',
-'input_class' => '',
 'value' => $datum->id,
-
 ])@endhidden()
 
-@hidden([
-'name' => 'client_id',
-'col' => 'col-12 col-md-6 col-lg-3 mb-3',
-'input_class' => '',
-'value' => $datum->client_id,
-])@endhidden()
 @text([
 'name' => 'code',
 'label' => 'Code',
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('code') ?? $datum->code,
-'placeholder' => 'Enter the code',
+'placeholder' => 'Enter your code',
 'disabled' => 1,
 ])@endtext()
 
@@ -29,19 +19,19 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('name') ?? $datum->name,
-'placeholder' => 'Enter the name',
+'placeholder' => 'Enter your name',
 'disabled' => 1,
 ])@endtext()
 
-@text([
-'name' => 'client_key',
-'label' => 'Client Key',
-'col' => 'col-12 col-md-6 col-lg-4 mb-3',
+@select([
+'name' => 'user_id',
+'label' => 'User',
+'col' => 'col-12 col-md-6 col-lg-3 mb-3',
 'input_class' => '',
-'value' => old('client_key') ?? $datum->client_key,
-'placeholder' => 'Enter the client key',
+'elements' => $users,
+'value' => old('user_id') ?? $datum->user_id,
 'disabled' => 1,
-])@endtext()
+])@endselect()
 
 @textarea([
 'name' => 'remarks',
@@ -49,7 +39,7 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('remarks') ?? $datum->remarks,
-'placeholder' => 'Enter the remarks',
+'placeholder' => 'Enter your remarks',
 'disabled' => 1,
 ])@endtextarea()
 

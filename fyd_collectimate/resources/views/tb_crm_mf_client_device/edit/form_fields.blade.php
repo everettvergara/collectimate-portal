@@ -20,7 +20,7 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('code') ?? $datum->code,
-'placeholder' => 'Enter your code',
+'placeholder' => 'Enter the code',
 ])@endtext()
 
 @text([
@@ -29,7 +29,16 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('name') ?? $datum->name,
-'placeholder' => 'Enter your name',
+'placeholder' => 'Enter the name',
+])@endtext()
+
+@text([
+'name' => 'client_key',
+'label' => 'Client Key',
+'col' => 'col-12 col-md-6 col-lg-4 mb-3',
+'input_class' => '',
+'value' => old('client_key') ?? $datum->client_key,
+'placeholder' => 'Enter the client key',
 ])@endtext()
 
 @textarea([
@@ -38,9 +47,8 @@
 'col' => 'col-12 col-md-6 col-lg-4 mb-3',
 'input_class' => '',
 'value' => old('remarks') ?? $datum->remarks,
-'placeholder' => 'Enter your remarks',
+'placeholder' => 'Enter the remarks',
 ])@endtextarea()
-
 
 <div class="col-12 col-lg-3 mb-3">
     @checkbox([
