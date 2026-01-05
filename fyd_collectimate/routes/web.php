@@ -2,6 +2,7 @@
 
 use App\Helpers\RouteHelpers;
 use App\Http\Controllers\promotion_controller;
+use App\Http\Controllers\reactflow_controller;
 use App\Http\Controllers\select2_controller;
 use App\Http\Controllers\tb_crm_mf_client_controller;
 use App\Http\Controllers\tb_crm_mf_client_device_controller;
@@ -125,6 +126,15 @@ Route::middleware(['auth', "can:has_access,'Licenses'"])->controller(tb_crm_mf_l
 });
 
 Route::middleware(['auth', "can:has_access,'Scripts'"])->resource('scripts', tb_crm_tr_script_controller::class);
+Route::middleware(['auth', "can:has_access,'Scripts'"])->controller(tb_crm_tr_script_controller::class)->group(function () {
+    Route::get('/scripts/{script}}/edit-script', 'edit_script')->name('scripts.edit-script');
+});
+
+Route::middleware(['auth', "can:has_access,'Scripts'"])->controller(reactflow_controller::class)->group(function () {
+    Route::get('/reactflow/editor/{script}', 'editor')->name('reactflow.editor');
+    Route::get('/api/reactflow/{script}', 'getJson')->name('reactflow.getjson');
+    Route::post('/api/reactflow/{script}', 'saveJson')->name('reactflow.savejson');
+});
 
 Route::middleware(['auth'])->controller(tb_sys_mf_tutorial_controller::class)->group(function () {
     Route::get('/tutorials', 'index')->name('tutorials.index');

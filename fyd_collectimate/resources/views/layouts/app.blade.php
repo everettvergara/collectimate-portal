@@ -24,7 +24,7 @@
     <script nonce="{{ csp_nonce() }}" src="{{ asset('/js/jquery.min.js') }}"></script>
     <script nonce="{{ csp_nonce() }}" src="{{ asset('/js/jquery-ui.min.js') }}"></script>
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.jsx'])
     <!-- Popperjs -->
     <script nonce="{{ csp_nonce() }}" src="{{ asset('/js/popper.min.js') }}"></script>
     <!-- Tempus Dominus JavaScript -->

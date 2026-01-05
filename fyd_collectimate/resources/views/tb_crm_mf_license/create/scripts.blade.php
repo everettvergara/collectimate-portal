@@ -16,7 +16,7 @@
                     return {
                         _token: CSRF_TOKEN,
                         search: params.term,
-                        province_id: province_id.value,
+                        client_id: client_id.value,
                     };
                 },
                 processResults: function(response) {

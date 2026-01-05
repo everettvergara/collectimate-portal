@@ -8,6 +8,7 @@ use App\Models\tb_crm_mf_license_type;
 use App\Models\tb_crm_tr_script;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class tb_crm_tr_script_controller extends Controller
 {
@@ -108,6 +109,9 @@ class tb_crm_tr_script_controller extends Controller
             'clients'           => $dropdowns['clients'],
             'license_types'     => $dropdowns['license_types'],
         ])->render();
+        $custom_form_submit = view($this->view_path . '.edit.custom_form_submit', [
+            'datum'             => $datum,
+        ])->render();
         $scripts = view($this->view_path . '.edit.scripts')->render();
         return view('base.header.edit', [
             'route'         => $this->route,
@@ -116,6 +120,7 @@ class tb_crm_tr_script_controller extends Controller
             'title'         => $this->title,
             'head'          => $head,
             'form_fields'   => $form_fields,
+            'custom_form_submit'    => $custom_form_submit,
             'scripts'       => $scripts,
         ]);
     }
@@ -142,5 +147,25 @@ class tb_crm_tr_script_controller extends Controller
             'clients' => tb_crm_mf_client::get(),
             'license_types' => tb_crm_mf_license_type::get(),
         ];
+    }
+
+
+    public function edit_script($id)
+    {
+        $script = tb_crm_tr_script::findOrFail($id);
+
+        if (!isset($script->json_file_path)) {
+            return redirect()->back()->with('alert', "Json File Path required.");
+        }
+        $fileName = $script->json_file_path;
+        $filePath = "scripts/{$fileName}";
+
+        // If file doesn’t exist, create with empty JSON
+        if (!Storage::exists($filePath)) {
+            Storage::put($filePath, json_encode(['nodes' => [], 'edges' => []], JSON_PRETTY_PRINT));
+        }
+
+        // Redirect to ReactFlow editor route
+        return redirect()->route('reactflow.editor', ['script' => $script->id]);
     }
 }

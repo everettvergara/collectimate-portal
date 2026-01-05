@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class collectimate_controller extends Controller
 {
@@ -88,12 +89,18 @@ class collectimate_controller extends Controller
         $data = [];
         try {
             foreach ($scripts as $i => $script) {
+                $path = 'scripts/' . $script->json_file_path;
+                $encoded = null;
+                if (Storage::exists($path)) {
+                    $contents = Storage::get($path);
+                    $encoded = base64_encode($contents);
+                }
                 $data[$i] = [
                     "id" => $script->id,
                     "name" => $script->name,
                     "license_type" => $script->license_type,
                     "script" => $script->json_file_path,
-                    "b64" => null,
+                    "b64" => $encoded,
                 ];
             }
         } catch (\Throwable $th) {

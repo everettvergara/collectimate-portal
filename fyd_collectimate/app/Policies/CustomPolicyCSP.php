@@ -25,27 +25,24 @@ class CustomPolicyCSP extends Policy
     public function configure(): void
     {
         $this
-           ->addDirective(Directive::SCRIPT, [
+            ->addDirective(Directive::SCRIPT, [
                 Keyword::SELF,
-                'nonce-'.$this->nonce,
+                'nonce-' . $this->nonce,
                 'https://unpkg.com',
-                'https://www.google.com',
-                'https://www.gstatic.com',
                 'https://cdn.jsdelivr.net',
-                Keyword::UNSAFE_INLINE,  // <-- add this
+                // 'http://localhost:5173', // add in dev if using Vite
             ])
-
             ->addDirective(Directive::STYLE, [
                 Keyword::SELF,
                 'data:',
-                "nonce-{$this->nonce}",
-                Keyword::UNSAFE_INLINE, // Allow inline styles
+                'nonce-' . $this->nonce,
                 'https://cdn.jsdelivr.net',
+                'https://fonts.googleapis.com',
             ])
-
             ->addDirective(Directive::CONNECT, [
                 Keyword::SELF,
                 'https://unpkg.com',
+                // 'ws://localhost:5173', // add in dev for HMR
             ])
             ->addDirective(Directive::IMG, [
                 Keyword::SELF,
@@ -54,12 +51,9 @@ class CustomPolicyCSP extends Policy
             ->addDirective(Directive::FONT, [
                 Keyword::SELF,
                 'https://fonts.gstatic.com',
-                'https://cdn.example.com',
-                'https://fonts.bunny.net',   // <-- Add this line
+                'https://fonts.bunny.net',
                 'data:',
             ])
-
-
             ->addDirective(Directive::FORM_ACTION, [
                 Keyword::SELF,
             ])
