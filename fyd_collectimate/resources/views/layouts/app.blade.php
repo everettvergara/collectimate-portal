@@ -93,6 +93,10 @@
 
 </html>
 <script type="module" nonce="{{ csp_nonce() }}">
+    console.log('Hello world');
+</script>
+
+<script type="module" nonce="{{ csp_nonce() }}">
     $(window).on('load', function() {
         $('#errors').modal('show');
         $('#alert').modal('show');
