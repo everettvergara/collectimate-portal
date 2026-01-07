@@ -49,7 +49,13 @@ class Handler extends ExceptionHandler
     }
     protected function unauthenticated($request, AuthenticationException $exception)
     {
-        return redirect('/'); // Redirect to home page
+        // return redirect('/'); // Redirect to home page
+
+        if ($request->expectsJson()) {
+            return response()->json(['success' => false, 'error' => ['code' => 'UNAUTHENTICATED', 'message' => $exception->getMessage(),]], 401);
+        }
+        // Default: redirect for web routes
+        return redirect()->guest(route('login'));
     }
 
     public function render($request, Throwable $exception)

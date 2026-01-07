@@ -53,8 +53,6 @@ class collectimate_controller extends Controller
         return response()->json([
             'success' => true,
             'data'    => $data,
-            'licenses'  => $licenses,
-            'abilities' => $abilities,
         ], 200);
     }
 
