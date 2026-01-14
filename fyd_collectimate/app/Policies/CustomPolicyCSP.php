@@ -2,7 +2,8 @@
 
 namespace App\Policies;
 
-use Illuminate\Support\Facades\Log;  // <--- Add this
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Config;
 use Spatie\Csp\Directive;
 use Spatie\Csp\Keyword;
 use Spatie\Csp\Policies\Policy;
@@ -12,9 +13,6 @@ class CustomPolicyCSP extends Policy
     /** @var string */
     protected string $nonce = '';
 
-    /**
-     * Automatically called by Spatie CSP middleware when nonce is generated.
-     */
     public function setNonce(string $nonce): static
     {
         $this->nonce = $nonce;
@@ -24,18 +22,23 @@ class CustomPolicyCSP extends Policy
 
     public function configure(): void
     {
+        // Base strict policy
         $this
             ->addDirective(Directive::SCRIPT, [
                 Keyword::SELF,
-                'nonce-' . $this->nonce,
                 'https://unpkg.com',
                 'https://cdn.jsdelivr.net',
-                // 'http://localhost:5173', // add in dev if using Vite
+                'https://fonts.googleapis.com',
+            ])
+            ->addDirective(Directive::SCRIPT_ELEM, [
+                Keyword::SELF,
+                'https://unpkg.com',
+                'https://cdn.jsdelivr.net',
+                'https://fonts.googleapis.com',
             ])
             ->addDirective(Directive::STYLE, [
                 Keyword::SELF,
                 'data:',
-                'nonce-' . $this->nonce,
                 'https://cdn.jsdelivr.net',
                 'https://fonts.googleapis.com',
             ])
@@ -52,6 +55,7 @@ class CustomPolicyCSP extends Policy
                 Keyword::SELF,
                 'https://fonts.gstatic.com',
                 'https://fonts.bunny.net',
+                'https://fonts.googleapis.com',
                 'data:',
             ])
             ->addDirective(Directive::FORM_ACTION, [
@@ -59,6 +63,25 @@ class CustomPolicyCSP extends Policy
             ])
             ->addDirective(Directive::BASE, [
                 Keyword::SELF,
-            ]);
+            ])
+            ->addNonceForDirective(Directive::SCRIPT)
+            ->addNonceForDirective(Directive::SCRIPT_ELEM)
+            ->addNonceForDirective(Directive::STYLE);
+
+        // 👇 Relax CSP when debug mode is enabled
+        if (Config::get('app.debug')) {
+            $this
+                ->addDirective(Directive::SCRIPT, [
+                    Keyword::UNSAFE_INLINE,
+                    Keyword::UNSAFE_EVAL,
+                ])
+                ->addDirective(Directive::SCRIPT_ELEM, [
+                    Keyword::UNSAFE_INLINE,
+                    Keyword::UNSAFE_EVAL,
+                ])
+                ->addDirective(Directive::STYLE, [
+                    Keyword::UNSAFE_INLINE,
+                ]);
+        }
     }
 }

@@ -6,7 +6,7 @@ return [
      * A policy will determine which CSP headers will be set. A valid CSP policy is
      * any class that extends `Spatie\Csp\Policies\Policy`
      */
-    'policy' => Spatie\Csp\Policies\Basic::class,
+    'policy' => App\Policies\CustomPolicyCSP::class,
 
     /*
      * This policy which will be put in report only mode. This is great for testing out
@@ -39,8 +39,5 @@ return [
      * Note that this will make your CSP policy less secure.
      */
     'nonce_enabled' => env('CSP_NONCE_ENABLED', true),
-
-    // config/csp.php
-   'policy' => App\Policies\CustomPolicyCSP::class,
 
 ];
